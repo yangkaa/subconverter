@@ -1,7 +1,7 @@
 {
   "route": "bypass-lan-china",
   "remote_dns": "dns.google",
-  "ipv6": false,
+  "ipv6": true,
   "metered": false,
   "proxy_apps": {
     "enabled": false,

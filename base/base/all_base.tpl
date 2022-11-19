@@ -6,9 +6,11 @@ allow-lan: {{ default(global.clash.allow_lan, "true") }}
 mode: Rule
 log-level: {{ default(global.clash.log_level, "info") }}
 external-controller: :9090
+ipv6: true
 {% if default(request.clash.dns, "") == "1" %}
 dns:
   enable: true
+  ipv6: true
   listen: :1053
 {% endif %}
 {% if local.clash.new_field_name == "true" %}
@@ -179,7 +181,7 @@ loglevel = warning
 loglevel = notify
 interface = 127.0.0.1
 skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local
-ipv6 = false
+ipv6 = true
 dns-server = system, 223.5.5.5
 exclude-simple-hostnames = true
 enhanced-mode-by-rule = true
@@ -188,7 +190,7 @@ enhanced-mode-by-rule = true
 {
   "route": "bypass-lan-china",
   "remote_dns": "dns.google",
-  "ipv6": false,
+  "ipv6": true,
   "metered": false,
   "proxy_apps": {
     "enabled": false,
