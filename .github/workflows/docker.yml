@@ -35,7 +35,7 @@ jobs:
         with:
           platforms: linux/amd64
           context: scripts/
-          tags: tindy2013/subconverter:latest
+          tags: yangk/subconverter:latest
           build-args: |
             SHA=${{ steps.vars.outputs.sha_short }}
           outputs: type=image,push=true
@@ -56,7 +56,7 @@ jobs:
         with:
           platforms: linux/amd64
           context: scripts/
-          tags: tindy2013/subconverter:${{steps.version.outputs.result}}
+          tags: yangk/subconverter:${{steps.version.outputs.result}}
           outputs: type=image,push=true
 
       - name: Save digest
@@ -102,7 +102,7 @@ jobs:
         with:
           platforms: linux/386
           context: scripts/
-          tags: tindy2013/subconverter:latest
+          tags: yangk/subconverter:latest
           build-args: |
             SHA=${{ steps.vars.outputs.sha_short }}
           outputs: type=image,push=true
@@ -123,7 +123,7 @@ jobs:
         with:
           platforms: linux/386
           context: scripts/
-          tags: tindy2013/subconverter:${{steps.version.outputs.result}}
+          tags: yangk/subconverter:${{steps.version.outputs.result}}
           outputs: type=image,push=true
 
       - name: Save digest
@@ -172,7 +172,7 @@ jobs:
         with:
           platforms: linux/arm/v7
           context: scripts/
-          tags: tindy2013/subconverter:latest
+          tags: yangk/subconverter:latest
           build-args: |
             SHA=${{ steps.vars.outputs.sha_short }}
             THREADS=2
@@ -194,7 +194,7 @@ jobs:
         with:
           platforms: linux/arm/v7
           context: scripts/
-          tags: tindy2013/subconverter:${{steps.version.outputs.result}}
+          tags: yangk/subconverter:${{steps.version.outputs.result}}
           build-args: |
             THREADS=2
           outputs: type=image,push=true
@@ -245,7 +245,7 @@ jobs:
         with:
           platforms: linux/arm64
           context: scripts/
-          tags: tindy2013/subconverter:latest
+          tags: yangk/subconverter:latest
           build-args: |
             SHA=${{ steps.vars.outputs.sha_short }}
             THREADS=2
@@ -267,7 +267,7 @@ jobs:
         with:
           platforms: linux/arm64
           context: scripts/
-          tags: tindy2013/subconverter:${{steps.version.outputs.result}}
+          tags: yangk/subconverter:${{steps.version.outputs.result}}
           build-args: |
             THREADS=2
           outputs: type=image,push=true
@@ -338,7 +338,7 @@ jobs:
 #        with:
 #          platforms: linux/amd64,linux/arm/v7,linux/arm64,linux/386
 #          context: scripts/
-#          tags: tindy2013/subconverter:latest
+#          tags: yangk/subconverter:latest
 #          build-args: |
 #            SHA=${{ steps.vars.outputs.sha_short }}
 #            THREADS=1
@@ -369,7 +369,7 @@ jobs:
 #        with:
 #          platforms: linux/amd64,linux/arm/v7,linux/arm64,linux/386
 #          context: scripts/
-#          tags: tindy2013/subconverter:${{steps.version.outputs.result}}
+#          tags: yangk/subconverter:${{steps.version.outputs.result}}
 #          build-args: THREADS=1
 #          outputs: type=image,push=true
 
